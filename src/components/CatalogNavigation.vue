@@ -1,7 +1,7 @@
 <template>
 <div class="catalog-navigation">
 	<div class="header">
-        <router-link to="/" class="title -pointer">SSE CK Catalog</router-link>
+        <router-link to="/" class="title -pointer">SSE CK CATALOG</router-link>
     </div>
 </div>
 </template>

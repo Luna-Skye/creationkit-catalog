@@ -46,7 +46,7 @@ export default {
                 display: block;
                 
                 &.-pointer:hover {
-                    text-shadow: 0 0 64px rgba($color-white, 0.8);
+                    text-shadow: 0 0 32px rgba($color-white, 0.5);
                 }
             }
         }
