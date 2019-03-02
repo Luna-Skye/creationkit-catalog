@@ -1,7 +1,7 @@
 <template>
 <div id="home">
     <h1>HOME PAGE</h1>
-    <router-link to="/catalog">Catalog</router-link>
+    <router-link to="/catalog" class="-pointer">Catalog</router-link>
 </div>
 </template>
 
