@@ -15,7 +15,7 @@ body {
     margin: 0;
     background:
         linear-gradient(rgba($color-black, 0.8), rgba($color-black, 0.8)),
-        url('https://i.imgur.com/G40dzV7.jpg');
+        url('http://all4desktop.com/data_images/original/4175653-skyrim-HD.jpg');
 }
 #app {
 	min-height: 100vh;
