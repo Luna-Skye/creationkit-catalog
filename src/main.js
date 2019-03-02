@@ -5,6 +5,9 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+// GLOBAL COMPONENTS
+Vue.component('EdgeFlare', () => import('@/components/EdgeFlare.vue'))
+
 new Vue({
     router,
     store,
