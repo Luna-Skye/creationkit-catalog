@@ -1,13 +1,12 @@
 <template>
-<div id="home">
-    <h1>HOME PAGE</h1>
-    <router-link to="/catalog">Catalog</router-link>
+<div id="catalog">
+    
 </div>
 </template>
 
 <script>
 export default {
-  
+    
 }
 </script>
 

@@ -1,0 +1,24 @@
+// ----------------------------------------------
+// GLOBAL SCSS STYLES ---------------------------
+// ----------------------------------------------
+
+
+// ----------------------------------------------
+// INITIALIZE FONT ------------------------------
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+* { font-family: "Roboto", sans-serif; }
+
+
+// ----------------------------------------------
+// FANCY SCROLLBARS -----------------------------
+*::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background: rgba($color-white, 0.1);
+    transition: background 0.1s ease;
+}
+*:hover::-webkit-scrollbar-thumb {
+    background: rgba($color-white, 0.5);
+}
