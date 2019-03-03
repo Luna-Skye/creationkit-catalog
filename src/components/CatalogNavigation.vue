@@ -1,16 +1,19 @@
 <template>
 <div class="catalog-navigation">
-	<div class="header">
+	<div class="header -grid">
         <router-link to="/" class="title -pointer">SKYRIM CK CATALOG</router-link>
         
         <Icon icon="cog" class="-pointer" @click.native="openSettings = true" />
     </div>
+    <Breadcrumbs />
 </div>
 </template>
 
 <script>
+import Breadcrumbs from '@/components/Breadcrumbs.vue'
+
 export default {
-    
+    components: { Breadcrumbs },
     data() {
         return {
             openSettings: false

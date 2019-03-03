@@ -39,10 +39,13 @@ export default {
         grid-row: span 2;
         > .header {
             font-size: 24px;
+            border-bottom: 2px solid rgba($color-white, 0.5);
+            
             > .title {
                 color: $color-white;
                 text-decoration: none;
                 padding: 16px;
+				margin: 0;
                 display: block;
                 
                 &.-pointer:hover {
