@@ -6,6 +6,7 @@ import store from './store'
 Vue.config.productionTip = false
 
 // GLOBAL COMPONENTS
+Vue.component('Popover', () => import('@/components/Popover.vue'))
 Vue.component('EdgeFlare', () => import('@/components/EdgeFlare.vue'))
 Vue.component('Icon', () => import('@/components/Icon.vue'))
 

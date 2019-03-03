@@ -4,6 +4,9 @@
         <router-link to="/" class="title -pointer">SKYRIM CK CATALOG</router-link>
         
         <Icon icon="cog" class="-pointer" @click.native="openSettings = true" />
+        <Popover v-if="openSettings">
+            
+        </Popover>
     </div>
     <Breadcrumbs />
 </div>
@@ -29,10 +32,18 @@ export default {
     border-right: 2px solid $color-white;
     
     .header.-grid {
+        position: relative;
+        
         display: grid;
         grid-template-columns: auto 56px;
         align-items: center;
         .uil { padding: 16px; }
+        
+        .popover {
+            width: 404px;
+            top: 26px;
+            right: 24px;
+        }
     }
 }
 </style>
