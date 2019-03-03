@@ -20,6 +20,7 @@ export default {
 <style lang="scss">
 .uil {
 	display: inline-block;
+	color: $color-white;
 	
 	&:before {
 		margin: 0;
