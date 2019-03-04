@@ -41,9 +41,18 @@ export default {
 .input {
     position: relative;
     
-    &.-leftedge { padding-left: 34px; }
-    &.-rightedge { padding-right: 34px; }
-    &.-bothedge { padding: 0 34px; }
+    &.-leftedge {
+        padding-left: 34px;
+        input:focus { background: linear-gradient(-90deg, rgba($color-white, 0.1), transparent); }
+    }
+    &.-rightedge {
+        padding-right: 34px;
+        input:focus { background: linear-gradient(90deg, rgba($color-white, 0.1), transparent); }
+    }
+    &.-bothedge {
+        padding: 0 34px;
+        input:focus { background: linear-gradient(90deg, transparent, rgba($color-white, 0.1), transparent); }
+    }
     
     .edge-flare { top: -6px; }
     .edge-flare.-left { left: 0; }
