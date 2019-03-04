@@ -1,9 +1,9 @@
 <template>
 <div class="popover">
-	<EdgeFlare class="-top -left" />
-	<EdgeFlare class="-top -right" />
-	<EdgeFlare class="-bottom -left" />
-	<EdgeFlare class="-bottom -right" />
+	<EdgeFlare v-if="edge.includes('topleft')" class="-top -left" />
+	<EdgeFlare v-if="edge.includes('topright')" class="-top -right" />
+	<EdgeFlare v-if="edge.includes('bottomleft')" class="-bottom -left" />
+	<EdgeFlare v-if="edge.includes('bottomright')" class="-bottom -right" />
 	
 	<slot />
 </div>
@@ -11,7 +11,12 @@
 
 <script>
 export default {
-    
+    props: {
+		edge: {
+			type: Array,
+			default: []
+		}
+	}
 }
 </script>
 
@@ -19,7 +24,8 @@ export default {
 .popover {
 	background: rgba($color-black, 0.8);
 	min-width: 320px;
-	min-height: 400px;
+	min-height: 100px;
+	padding-bottom: 16px;
 	position: absolute;
 	border: 2px solid $color-white;
 	
@@ -33,6 +39,24 @@ export default {
 		&.-top.-right { transform: rotate(135deg); }
 		&.-bottom.-left { transform: rotate(-45deg); }
 		&.-bottom.-right { transform: rotate(-135deg); }
+	}
+	
+	.title {
+		color: $color-white;
+		text-decoration: none;
+		padding: 16px;
+		margin: 0;
+		display: block;
+		font-size: 24px;
+	}
+	
+	.subtitle {
+		color: $color-white;
+		text-decoration: none;
+		padding: 16px;
+		margin: 0;
+		display: block;
+		font-size: 18px;
 	}
 }
 </style>
