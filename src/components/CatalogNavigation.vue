@@ -4,22 +4,53 @@
         <router-link to="/" class="title -pointer">SKYRIM CK CATALOG</router-link>
         
         <Icon icon="cog" class="-pointer" @click.native="openSettings = true" />
-        <Popover v-if="openSettings">
+        <Popover v-if="openSettings" :edge="['topright']">
+            <!-- GENERAL SETTINGS -->
+            <p class="title">SETTINGS</p>
+            <Checkbox
+                v-model="$store.state.readableNames"
+                label="Readable Object Names"
+            />
+            <Checkbox
+                v-model="$store.state.customCursors"
+                label="Custom Cursors"
+            />
             
+            <!-- ESM SETTINGS -->
+            <p class="subtitle">ESMs</p>
+            <Checkbox
+                v-model="$store.state.esmSkyrim"
+                label="Skyrim.esm"
+            />
+            <Checkbox
+                v-model="$store.state.esmHearthfire"
+                label="Hearthfire.esm" class="disabled"
+            />
+            <Checkbox
+                v-model="$store.state.esmDragonborn"
+                label="Dragonborn.esm" class="disabled"
+            />
+            <Checkbox
+                v-model="$store.state.esmDawnguard"
+                label="Dawnguard.esm" class="disabled"
+            />
         </Popover>
     </div>
+	
     <Breadcrumbs />
 </div>
 </template>
 
 <script>
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
+import Checkbox from '@/components/Checkbox.vue'
 
 export default {
-    components: { Breadcrumbs },
+    components: { Breadcrumbs, Checkbox },
     data() {
         return {
-            openSettings: false
+            openSettings: false,
+            checkbox: false
         }
     }
 }
@@ -31,7 +62,7 @@ export default {
     border-left: 2px solid $color-white;
     border-right: 2px solid $color-white;
     
-    .header.-grid {
+    > .header.-grid {
         position: relative;
         
         display: grid;

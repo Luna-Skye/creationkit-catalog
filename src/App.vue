@@ -37,4 +37,12 @@ body {
 *:hover::-webkit-scrollbar-thumb {
     background: rgba($color-white, 0.5);
 }
+
+
+// ----------------------------------------------
+// DISABLED -------------------------------------
+.disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
 </style>
