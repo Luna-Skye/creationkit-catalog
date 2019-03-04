@@ -38,10 +38,10 @@ export default {
     .catalog-results {
         grid-row: span 2;
         > .header {
-            font-size: 24px;
             border-bottom: 2px solid rgba($color-white, 0.5);
             
             > .title {
+                font-size: 24px;
                 color: $color-white;
                 text-decoration: none;
                 padding: 16px;
